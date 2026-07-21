@@ -13,17 +13,12 @@
 // limitations under the License.
 
 package {
-    // See: http://go/android-license-faq
-    // A large-scale-change added 'default_applicable_licenses' to import
-    // all of the 'license_kinds' from "hardware_interfaces_license"
-    // to get the below license kinds:
-    //   SPDX-license-identifier-Apache-2.0
     default_applicable_licenses: ["hardware_interfaces_license"],
 }
 
 cc_library {
     name: "android.hardware.audiocontrol.internal",
-    vendor: true,
+    vendor_available: true,
     srcs: [
         "src/CarAudioConfigurationXmlConverter.cpp",
         "src/CarAudioConfigurationUtils.cpp",
@@ -36,7 +31,6 @@ cc_library {
         "latest_android_hardware_automotive_audiocontrol_ndk_shared",
         "car.audio.configuration.xsd.default",
         "car.fade.configuration.xsd.default",
-        "aidlaudioservice_defaults",
         "latest_android_media_audio_common_types_ndk_static",
     ],
     shared_libs: [
@@ -46,11 +40,33 @@ cc_library {
         "car.audio.configuration.xsd.default",
         "car.fade.configuration.xsd.default",
         "liblog",
+        "libalsautilsv2",
+        "libaudio_aidl_conversion_common_ndk",
+        "libaudioaidlcommon",
+        "libaudioutils",
+        "libbinder_ndk",
+        "libcutils",
+        "libfmq",
+        "libstagefright_foundation",
+        "libtinyalsav2",
+        "libxml2",
+        "android.hardware.common-V2-ndk",
+        "android.hardware.common.fmq-V1-ndk",
     ],
     static_libs: [
         "libaudio_aidl_conversion_common_ndk_cpp",
     ],
     header_libs: [
         "libaudio_system_headers",
+        "libaudioaidl_headers",
+        "libxsdc-utils",
     ],
+    cflags: [
+        "-DBACKEND_NDK",
+    ],
+    target: {
+        vendor: {
+            shared_libs: ["libnbaio_mono"],
+        },
+    },
 }

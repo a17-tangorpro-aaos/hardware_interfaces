@@ -26,7 +26,7 @@ cc_binary {
     relative_install_path: "hw",
     init_rc: ["audiocontrol-default.rc"],
     vintf_fragments: ["audiocontrol-default.xml"],
-    vendor: true,
+    system_ext_specific: true,
     defaults: [
         "latest_android_hardware_audio_common_ndk_shared",
         "latest_android_hardware_automotive_audiocontrol_ndk_shared",

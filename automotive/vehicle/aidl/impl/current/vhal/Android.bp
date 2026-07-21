@@ -21,7 +21,7 @@ package {
 
 cc_binary {
     name: "android.hardware.automotive.vehicle@V4-default-service",
-    vendor: true,
+    system_ext_specific: true,
     defaults: [
         "FakeVehicleHardwareDefaults",
         "VehicleHalDefaults",
@@ -46,7 +46,7 @@ cc_binary {
 
 cc_library {
     name: "DefaultVehicleHal",
-    vendor: true,
+    vendor_available: true,
     host_supported: true,
     defaults: [
         "VehicleHalDefaults",

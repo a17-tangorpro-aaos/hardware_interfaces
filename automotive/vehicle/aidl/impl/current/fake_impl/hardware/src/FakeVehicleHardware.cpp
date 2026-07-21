@@ -115,10 +115,10 @@ constexpr int32_t ENDING_VENDOR_CODE_PROPERTIES_FOR_TEST =
         toInt(VehiclePropertyType::INT32);
 // The directory for default property configuration file.
 // For config file format, see impl/default_config/config/README.md.
-constexpr char DEFAULT_CONFIG_DIR[] = "/vendor/etc/automotive/vhalconfig/";
+constexpr char DEFAULT_CONFIG_DIR[] = "/system_ext/etc/automotive/vhalconfig/";
 // The directory for property configuration file that overrides the default configuration file.
 // For config file format, see impl/default_config/config/README.md.
-constexpr char OVERRIDE_CONFIG_DIR[] = "/vendor/etc/automotive/vhaloverride/";
+constexpr char OVERRIDE_CONFIG_DIR[] = "/system_ext/etc/automotive/vhaloverride/";
 // The optional config file for power controller grpc service that provides vehicleInUse and
 // ApPowerBootupReason property.
 constexpr char GRPC_SERVICE_CONFIG_FILE[] = "/vendor/etc/automotive/powercontroller/serverconfig";

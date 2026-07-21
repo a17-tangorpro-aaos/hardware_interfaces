@@ -18,6 +18,7 @@
 
 #include <aidl/android/hardware/graphics/composer3/CommandResultPayload.h>
 #include <aidl/android/hardware/graphics/composer3/IComposerClient.h>
+#include <aidl/android/hardware/graphics/composer3/DisplayLuts.h>
 #include <android-base/logging.h>
 #include <inttypes.h>
 #include <string.h>

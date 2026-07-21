@@ -27,7 +27,7 @@ prebuilt_etc {
     filename_from_src: true,
     src: "DefaultProperties.json",
     sub_dir: "automotive/vhalconfig/",
-    vendor: true,
+    system_ext_specific: true,
 }
 
 prebuilt_etc {
@@ -35,7 +35,7 @@ prebuilt_etc {
     filename_from_src: true,
     src: "TestProperties.json",
     sub_dir: "automotive/vhalconfig/",
-    vendor: true,
+    system_ext_specific: true,
 }
 
 prebuilt_etc {
@@ -43,7 +43,7 @@ prebuilt_etc {
     filename_from_src: true,
     src: "VendorClusterTestProperties.json",
     sub_dir: "automotive/vhalconfig/",
-    vendor: true,
+    system_ext_specific: true,
 }
 
 prebuilt_etc_host {
